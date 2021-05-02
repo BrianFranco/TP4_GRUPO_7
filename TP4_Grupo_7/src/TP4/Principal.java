@@ -54,6 +54,12 @@ public class Principal extends JFrame {
 		contentPane.add(lblGrupoN);
 		
 		JButton btnEjercicio1 = new JButton("Ejercicio 1");
+		btnEjercicio1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ejercicio1 ej1 = new ejercicio1();
+				ej1.setVisible(true);
+			}
+		});
 		btnEjercicio1.setBounds(149, 63, 115, 23);
 		contentPane.add(btnEjercicio1);
 		
