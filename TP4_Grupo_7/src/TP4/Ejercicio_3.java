@@ -39,7 +39,7 @@ public class Ejercicio_3 extends JFrame {
 	 */
 	public Ejercicio_3() {
 		setTitle("Seleccion multiple");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 539, 331);
 		Ej3 = new JPanel();
 		setContentPane(Ej3);
@@ -93,11 +93,11 @@ public class Ejercicio_3 extends JFrame {
 		boxAdministracion.setBounds(195, 34, 174, 23);
 		panel_1.add(boxAdministracion);
 		
-		JCheckBox boxDiseño = new JCheckBox("Dise\u00F1o Grafico");
-		boxDiseño.setBounds(195, 59, 174, 23);
-		panel_1.add(boxDiseño);
+		JCheckBox boxDiseÃ±o = new JCheckBox("Dise\u00F1o Grafico");
+		boxDiseÃ±o.setBounds(195, 59, 174, 23);
+		panel_1.add(boxDiseÃ±o);
 		
-		JCheckBox[] checkBoxes = {boxProgramacion,boxAdministracion,boxDiseño};
+		JCheckBox[] checkBoxes = {boxProgramacion,boxAdministracion,boxDiseÃ±o};
 		
 		JLabel lblCantidadDeHoras = new JLabel("Cantidad de horas en el computador");
 		lblCantidadDeHoras.setFont(new Font("Tahoma", Font.PLAIN, 12));
