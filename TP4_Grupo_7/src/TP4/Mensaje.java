@@ -29,7 +29,7 @@ public class Mensaje extends JFrame {
 	 */
 	public Mensaje(JCheckBox[] checkBoxes,ButtonGroup bg,JTextField txtHoras) {
 		setTitle("Mensaje");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 452, 142);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -43,9 +43,10 @@ public class Mensaje extends JFrame {
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				bg.clearSelection();
+				dispose()
+				/*bg.clearSelection();
 				Ejercicio_3 ej3 = new Ejercicio_3();
-				ej3.setVisible(true);
+				ej3.setVisible(true);*/
 			}
 		});
 		btnAceptar.setBounds(128, 69, 89, 23);
