@@ -43,7 +43,7 @@ public class Mensaje extends JFrame {
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose()
+				dispose();
 				/*bg.clearSelection();
 				Ejercicio_3 ej3 = new Ejercicio_3();
 				ej3.setVisible(true);*/
