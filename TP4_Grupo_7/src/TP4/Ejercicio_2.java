@@ -154,17 +154,49 @@ public class Ejercicio_2 extends JFrame {
 				double promedio = (Double.parseDouble(txtNota1.getText())+Double.parseDouble(txtNota2.getText())+Double.parseDouble(txtNota3.getText()))/3;								
 				txtPromedio.setText(formato.format(promedio));	
 				
-			}
+				String tipo = (String) comboBox.getSelectedItem();
+				
+				if (tipo == "Desaprobado") {
+					txtCondicion.setText("Libre");
+			            }
+			        else {
+			        	if(promedio>=8) {
+			        		txtCondicion.setText("Promocionado");
+			            }
+			            else if(promedio>=6 && promedio<8) {
+			            	txtCondicion.setText("Regular");
+			            }
+			            else {
+			            	txtCondicion.setText("Libre");
+			            }
+			        	}
+			 
+		}
+			
 			
 		});
 		btnCalcular.setBounds(382, 28, 110, 38);
 		contentPane.add(btnCalcular);
 		
 		JButton btnNuevo = new JButton("NUEVO");
+		btnNuevo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				txtNota1.setText("");
+				txtNota2.setText("");
+				txtNota3.setText("");
+				txtPromedio.setText("");
+				txtCondicion.setText("");
+			}
+		});
 		btnNuevo.setBounds(382, 67, 110, 38);
 		contentPane.add(btnNuevo);
 		
 		JButton btnSalir = new JButton("SALIR");
+		btnSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		btnSalir.setBounds(382, 106, 110, 38);
 		contentPane.add(btnSalir);
 		

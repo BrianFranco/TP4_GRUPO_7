@@ -111,11 +111,30 @@ public class Ejercicio_3 extends JFrame {
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				try {
+				comprobarhora(txtHoras.getText());}
+				catch(HoraInvalidaException e1){
+					// TODO Auto-generated catch block
+					txtHoras.setText("Solo Numeros mayores a 0");
+					e1.printStackTrace();
+				}
 				Mensaje ventanaMensaje = new Mensaje(checkBoxes,bg,txtHoras);
 				ventanaMensaje.setVisible(true);
 			}
 		});
 		btnAceptar.setBounds(372, 245, 89, 23);
 		Ej3.add(btnAceptar);
+	}
+	public void comprobarhora(String hora) throws HoraInvalidaException {
+		for(int x=0; x< hora.length(); x++) {
+			if(!Character.isDigit(hora.charAt(x))) {
+				throw new HoraInvalidaException();
+			}
+		}
+		
+		if(Integer.parseInt(hora)<-1) {
+			throw new HoraInvalidaException();
+	}
+		///
 	}
 }
