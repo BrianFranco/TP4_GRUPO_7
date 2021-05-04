@@ -1,6 +1,5 @@
 package TP4;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -93,11 +92,11 @@ public class Ejercicio_3 extends JFrame {
 		boxAdministracion.setBounds(195, 34, 174, 23);
 		panel_1.add(boxAdministracion);
 		
-		JCheckBox boxDiseño = new JCheckBox("Dise\u00F1o Grafico");
-		boxDiseño.setBounds(195, 59, 174, 23);
-		panel_1.add(boxDiseño);
+		JCheckBox boxDisenio = new JCheckBox("Dise\u00F1o Grafico");
+		boxDisenio.setBounds(195, 59, 174, 23);
+		panel_1.add(boxDisenio);
 		
-		JCheckBox[] checkBoxes = {boxProgramacion,boxAdministracion,boxDiseño};
+		JCheckBox[] checkBoxes = {boxProgramacion,boxAdministracion,boxDisenio};
 		
 		JLabel lblCantidadDeHoras = new JLabel("Cantidad de horas en el computador");
 		lblCantidadDeHoras.setFont(new Font("Tahoma", Font.PLAIN, 12));
