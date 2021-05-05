@@ -28,29 +28,9 @@ public class Ejercicio_2 extends JFrame {
 	private JTextField txtNota3;
 	private JTextField txtPromedio;
 	private JTextField txtCondicion;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ejercicio_2 frame = new Ejercicio_2();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 	
 	DecimalFormat formato = new DecimalFormat("#.00");
 
-	/**
-	 * Create the frame.
-	 * @throws NotaInvalidaException 
-	 */
 	public Ejercicio_2() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 536, 300);
@@ -160,15 +140,20 @@ public class Ejercicio_2 extends JFrame {
 					txtCondicion.setText("Libre");
 			            }
 			        else {
-			        	if(promedio>=8) {
-			        		txtCondicion.setText("Promocionado");
-			            }
-			            else if(promedio>=6 && promedio<8) {
-			            	txtCondicion.setText("Regular");
-			            }
-			            else {
-			            	txtCondicion.setText("Libre");
-			            }
+			        if (Double.parseDouble(txtNota1.getText())<6 || Double.parseDouble(txtNota2.getText())<6 || Double.parseDouble(txtNota3.getText())<6) {
+			        		txtCondicion.setText("Libre");
+						} else {
+							if(Double.parseDouble(txtNota1.getText())>=8 && Double.parseDouble(txtNota2.getText())>=8 && Double.parseDouble(txtNota3.getText())>=8) {
+				        		txtCondicion.setText("Promocionado");
+				            }
+				            else if(promedio>=6 /*&& promedio<=8*/) {
+				            	txtCondicion.setText("Regular");
+				            }
+				            else {
+				            	txtCondicion.setText("Libre");
+				            }
+						}
+			        	
 			        	}
 			 
 		}
